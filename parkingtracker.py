@@ -1,4 +1,10 @@
+"""
+Design Parking Lot solution.
+"""
 class ParkingTracker:
+    """
+    Class Parking Tracker contains main logic for Parking vehicle and retriving the parked ones
+    """
     def __init__(self):
         self.total_capacity = 40
         self.spaces = [None for i in range(1,40)]
@@ -20,6 +26,9 @@ class ParkingTracker:
             return None
     
 def terminal_options():
+    """
+    Display options for terminal based window
+    """
     print()
     print("*"*20)
     print("1. Park a vehicle\n")
