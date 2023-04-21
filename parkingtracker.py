@@ -33,14 +33,21 @@ def terminal_options():
     print("*"*20)
     print("1. Park a vehicle\n")
     print("2. Retrive the parked spot number\n")
+    print("3. Exit program\n")
     print("*"*20)
     print("\n")
 
 def get_vehicle_number():
+    """
+    Get Vehicle number from user
+    """
     vehicle_no = input("Enter Vehicle Number\n")
     return vehicle_no
 
 def do_operation(choice,parking_lot):
+    """
+    User input based operations
+    """
     if choice == 1:
         vehicle_no = get_vehicle_number()
         parking_lot.park(vehicle_no)
@@ -49,6 +56,9 @@ def do_operation(choice,parking_lot):
         spot_data = parking_lot.get_parking_spot(vehicle_no)
         print()
         print(spot_data if spot_data else "No Vehicle with given")
+    elif choice == 3:
+        print("Program Terminated")
+        exit()
 
 if __name__ == "__main__":
     parking_lot = ParkingTracker()
